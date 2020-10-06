@@ -20,13 +20,14 @@ ui <- fluidPage(
   )
 )
 
-server <- function(input, output, session) {
-  output$sum <- renderText( {
+server <- function(input, output, session, external_ip = "34.77.186.115", port = "8080") {
+  output$sum <- renderText({
     # GET request from an API
-    r <- httr::GET(url="http://0.0.0.0:8080/__swagger__/",
-                   path="get_sum",
-                   query=list(x=input$x,
-                              y= input$y), verbose()
+    r <- httr::GET(url= paste0("http://",external_ip,":", port, "/__swagger__/"),
+                               #http://127.0.0.1:8080/__swagger__/",
+                               path="get_sum",
+                               query=list(x=input$x,
+                                          y= input$y), verbose()
     )
     fromJSON(content(r, "text"))
   })
