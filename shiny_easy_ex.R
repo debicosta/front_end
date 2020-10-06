@@ -24,7 +24,6 @@ server <- function(input, output, session, external_ip = external_ip, port = por
   output$sum <- renderText({
     # GET request from an API
     r <- httr::GET(url= paste0("http://",external_ip,":", port, "/__swagger__/"),
-                               #http://127.0.0.1:8080/__swagger__/",
                                path="get_sum",
                                query=list(x=input$x,
                                           y= input$y), verbose()
