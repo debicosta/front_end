@@ -1,8 +1,5 @@
-library(shiny)
-library(httr)
-library(dplyr)
-library(jsonlite)
-
+run_shiny_front <- function(){
+    
 options(shiny.host = "0.0.0.0", shiny.port = 8001)
 ui <- fluidPage(
   # Add a sidebar layout to the application
@@ -33,3 +30,4 @@ server <- function(input, output, session, external_ip = external_ip, port = por
 }
 
 shinyApp(ui, server)
+}
