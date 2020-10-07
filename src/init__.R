@@ -19,4 +19,5 @@ library(jsonlite)
 
 
 # running the front-end ---
-run_shiny_front()
+attach(get_api_parameters())
+run_shiny_front(external_ip, port)
