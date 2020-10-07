@@ -8,6 +8,7 @@
 # Output: main inputs to be used in GLOBAL.env
 ###################################################################################################
 
-# consuming API's from backend server
-external_ip = "34.77.186.115"
-port = "8080"
+# external ip and port for calling api's in front_end
+myfun <- function() list(external_ip = "34.77.186.115", port = "8080")
+
+
