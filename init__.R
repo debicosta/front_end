@@ -16,6 +16,6 @@ library(shiny)
 library(httr)
 library(dplyr)
 library(jsonlite)
-
+print(external_ip)
 # running the front-end ---
 run_shiny_front(external_ip, port)

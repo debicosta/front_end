@@ -9,6 +9,7 @@
 ###################################################################################################
 
 # external ip and port for calling api's in front_end
-get_api_parameters <- function() list(external_ip = "35.195.145.51", port = "8080")
+external_ip = "35.240.13.23"
+port = "8080"
 
 
