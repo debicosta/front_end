@@ -1,5 +1,5 @@
 run_shiny_front <- function(){
-    
+
 options(shiny.host = "0.0.0.0", shiny.port = 8001)
 ui <- fluidPage(
   # Add a sidebar layout to the application
@@ -17,7 +17,7 @@ ui <- fluidPage(
   )
 )
 
-server <- function(input, output, session, external_ip = external_ip, port = port) {
+server <- function(input, output, session, external_ip = "34.77.186.115", port = "8080") {
   output$sum <- renderText({
     # GET request from an API
     r <- httr::GET(url= paste0("http://",external_ip,":", port, "/__swagger__/"),
