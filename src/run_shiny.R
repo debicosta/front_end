@@ -1,4 +1,4 @@
-run_shiny_front <- function(external_ip, port){
+run_shiny_front <- function(){
     
 options(shiny.host = "0.0.0.0", shiny.port = 8001)
 ui <- fluidPage(
@@ -17,6 +17,7 @@ ui <- fluidPage(
   )
 )
 
+attach(get_api_parameters())
 server <- function(input, output, session, external_ip = external_ip, port = port) {
   output$sum <- renderText({
     # GET request from an API
