@@ -19,4 +19,4 @@ library(jsonlite)
 
 
 # running the front-end ---
-run_shiny_front(external_ip,port)
+run_shiny_front()
