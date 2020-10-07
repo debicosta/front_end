@@ -16,9 +16,7 @@ ui <- fluidPage(
     )
   )
 )
-print(external_ip)
-str(external_ip)
-server <- function(input, output, session,e = external_ip,p =  port) {
+server <- function(input, output, session, e = external_ip, p =  port) {
   output$sum <- renderText({
     # GET request from an API
     r <- httr::GET(url=paste0("http://", e,":", p, "/__swagger__/"),
