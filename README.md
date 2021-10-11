@@ -1,4 +1,4 @@
-# front_end
+# front_end in R
 This is the repository for the implementation of the front-end of my "hello-world" web-application.
 
 The organisation is as follow:
