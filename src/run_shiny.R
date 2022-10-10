@@ -1,6 +1,6 @@
 run_shiny_front <- function(external_ip,port){
     
-options(shiny.host = "0.0.0.0", shiny.port = 8001)
+options(shiny.host = "0.0.0.0", shiny.port = 3838)
 ui <- fluidPage(
   # Add a sidebar layout to the application
   sidebarLayout(
